@@ -18,11 +18,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoggingService {
 
-	@Value("${process.count}")
-	private int processCount;
-	
-	@Value("${max.events.count}")
-	private int maxEventsCount;
 
 	private static final Logger logger = LogManager.getLogger(LoggingService.class);
 
