@@ -7,4 +7,5 @@ FROM openjdk
 WORKDIR /home
 COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar .
 COPY start.sh .
+RUN chmod +x start.sh
 ENTRYPOINT /home/start.sh
