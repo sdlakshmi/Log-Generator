@@ -26,7 +26,7 @@ public class LoggingService {
 	@PostConstruct
 	public void logService() {
 		
-		logData();
+		writeJson();
 		
 //		while(true) {
 //			logData();
@@ -55,6 +55,12 @@ public class LoggingService {
 		}
 		
 
+	}
+	
+	private void writeJson() {
+		while(true) {
+			logger.info("{\"@timestamp\":\"2021-12-14T09:58:30.675Z\",\"@version\":\"1\",\"message\":\"Starting HappydeployApplication v0.0.1-SNAPSHOT using Java 1.8.0_292 on ip-172-31-19-67 with PID 134782 (/home/ubuntu/state-street/log-monitor/happydeploy-0.0.1-SNAPSHOT.jar started by root in /home/ubuntu/state-street/log-monitor)\",\"logger_name\":\"com.atanu.happydeploy.HappydeployApplication\",\"thread_name\":\"main\",\"level\":\"INFO\",\"level_value\":20000}");
+		}
 	}
 
 }
